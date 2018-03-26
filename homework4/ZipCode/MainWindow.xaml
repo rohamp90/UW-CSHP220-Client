@@ -1,0 +1,27 @@
+﻿<Window x:Class="ZipCode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZipCode"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="120" Width="525">
+    
+    <StackPanel>
+        <DockPanel Background="Azure">
+            <Label DockPanel.Dock="Left" FontWeight="Bold" FontSize="14">
+                Please Type a Valid US Zip Code or Canadian Postal Code:</Label>
+            <Button DockPanel.Dock="Right" Margin="70,0,0,0" Click="HelpButton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" FontWeight="Bold" Margin="0,0,5,0">Help</TextBlock>
+                    <!--Image from https://material.io/icons/-->
+                    <Image Source="images/Help_Icon.png" Width="20"/>
+                </StackPanel>
+            </Button>
+        </DockPanel>
+
+        <TextBox x:Name="uxTextbox" TextChanged="uxTextbox_DataContextChanged" ToolTip="Click Help for Formatting Information"/>
+        <Button x:Name="uxSubmit">Submit</Button>
+        
+    </StackPanel>
+</Window>
